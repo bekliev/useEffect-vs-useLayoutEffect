@@ -2,6 +2,8 @@ import React, { useState, useEffect, useLayoutEffect } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 
+import renderPipeline from "./renderPipeline.jpg";
+
 const UseEffect = () => {
   const [state, setState] = useState(0);
 
@@ -85,28 +87,50 @@ function App() {
       <fieldset>
         <legend>Conclusion</legend>
         <p>
-          In case of logic which triggers reflow (Layout+Paint+Composite) or
-          repaint (Paint+Composite) - use <code>useLayoutEffect</code> instead
+          Try to use <code>useLayoutEffect</code> hook in cases where triggers
+          reflow/repaint
         </p>
+        <table border="1" cellPadding="10px">
+          <tr>
+            <th></th>
+            <th>Layout</th>
+            <th>Paint</th>
+            <th>Composite</th>
+          </tr>
+          <tr>
+            <th>reflow</th>
+            <td>✅</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <th>repaint</th>
+            <td></td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+        </table>
         <img
-          src="https://developers.google.com/web/fundamentals/performance/rendering/images/intro/frame-full.jpg"
+          border="1px"
+          src={renderPipeline}
           style={{ maxWidth: "100%" }}
           alt="Javascript > Style > Layout > Paint > Composite"
         />
-        <p>
-          Use cases when to use <code>useLayoutEffect</code>
-        </p>
+        <h3>
+          Use cases when to use <code>useLayoutEffect</code>:
+        </h3>
         <ul>
+          <li>
+            if your effect changes state which triggers reflow/repaint (example
+            above changes number which triggers reflow)
+          </li>
           <li>
             if your effect changes <code>className</code>
           </li>
-          <li>
-            if you need to update DOM in your effect (which will trigger reflow)
-          </li>
+          <li>if you need to update DOM in your effect</li>
           <li>if you need to smooth your animation</li>
           <li>etc.</li>
         </ul>
-
         <p>
           You can learn more about rendering process here:{" "}
           <a

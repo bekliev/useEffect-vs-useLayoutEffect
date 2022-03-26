@@ -33,3 +33,13 @@ code {
 .macro {
   color: orange;
 }
+
+.bg-green {
+  background: green;
+}
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
