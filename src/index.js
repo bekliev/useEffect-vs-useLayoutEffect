@@ -93,6 +93,7 @@ function App() {
         <table border="1" cellPadding="10px">
           <tr>
             <th></th>
+            <th>Style</th>
             <th>Layout</th>
             <th>Paint</th>
             <th>Composite</th>
@@ -102,9 +103,11 @@ function App() {
             <td>✅</td>
             <td>✅</td>
             <td>✅</td>
+            <td>✅</td>
           </tr>
           <tr>
             <th>repaint</th>
+            <td>✅</td>
             <td></td>
             <td>✅</td>
             <td>✅</td>
