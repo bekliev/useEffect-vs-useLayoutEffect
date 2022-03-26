@@ -17,3 +17,10 @@ fieldset {
   font-weight: bold;
   color: green;
 }
+
+.micro {
+  color: blue;
+}
+.macro {
+  color: orange;
+}
