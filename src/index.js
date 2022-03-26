@@ -20,16 +20,16 @@ const UseEffect = () => {
 
       <p class="bad">repaint count: 2 (try to notice value flickering)</p>
       <details>
-        <summary>explanation</summary>
+        <summary>explanation (click me)</summary>
         <ol>
-          <li>macrotask / click event / setState</li>
-          <li>microtask / react updated state</li>
-          <li>microtask / react updated DOM</li>
-          <li class="bad">repaint</li>
-          <li>microtask / useEffect / setState (again)</li>
-          <li>microtask / react updated state</li>
-          <li>microtask / react updated DOM</li>
-          <li class="bad">repaint</li>
+          <li class="macro">macrotask / click event / setState</li>
+          <li class="micro">microtask / react updated state</li>
+          <li class="micro">microtask / react patched DOM</li>
+          <li class="bad">browser repaints</li>
+          <li class="micro">microtask / useEffect / setState (again)</li>
+          <li class="micro">microtask / react updated state</li>
+          <li class="micro">microtask / react patched DOM</li>
+          <li class="bad">browser repaints</li>
         </ol>
       </details>
     </fieldset>
@@ -54,15 +54,15 @@ const UseLayoutEffect = () => {
 
       <p class="ok">repaint count: 1</p>
       <details>
-        <summary>explanation</summary>
+        <summary>explanation (click me)</summary>
         <ol>
-          <li>macrotask / click event / setState</li>
-          <li>microtask / react updated state</li>
-          <li>microtask / react updated DOM</li>
-          <li>microtask / useLayoutEffect / setState (again)</li>
-          <li>microtask / react updated state</li>
-          <li>microtask / react updated DOM</li>
-          <li class="ok">repaint</li>
+          <li class="macro">macrotask / click event / setState</li>
+          <li class="micro">microtask / react updated state</li>
+          <li class="micro">microtask / react patched DOM</li>
+          <li class="micro">microtask / useLayoutEffect / setState (again)</li>
+          <li class="micro">microtask / react updated state</li>
+          <li class="micro">microtask / react patched DOM</li>
+          <li class="ok">browser repaints</li>
         </ol>
       </details>
     </fieldset>
