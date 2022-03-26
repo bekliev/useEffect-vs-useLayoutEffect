@@ -1,13 +1,8 @@
 {
-  "name": "useeffect-vs-uselayouteffect",
+  "name": "sync-github-bekliev-useeffect-vs-uselayouteffect",
   "version": "1.0.0",
-  "description": "DOM flickering/flashing because of misused useEffect with example and thorough explanation",
-  "keywords": [
-    "useeffect",
-    "performance",
-    "react",
-    "uselayouteffect"
-  ],
+  "description": "",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "react": "17.0.2",
