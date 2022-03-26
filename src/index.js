@@ -26,9 +26,7 @@ const UseEffect = () => {
           <li className="micro">microtask / react updated state</li>
           <li className="micro">microtask / react patched DOM</li>
           <li className="bad">browser repaints</li>
-          <li className="micro">
-            microtask / useEffect / setState(random number)
-          </li>
+          <li className="micro">microtask / useEffect / setState(random)</li>
           <li className="micro">microtask / react updated state</li>
           <li className="micro">microtask / react patched DOM</li>
           <li className="bad">browser repaints</li>
@@ -62,7 +60,7 @@ const UseLayoutEffect = () => {
           <li className="micro">microtask / react updated state</li>
           <li className="micro">microtask / react patched DOM</li>
           <li className="micro">
-            microtask / useLayoutEffect / setState(random number)
+            microtask / useLayoutEffect / setState(random)
           </li>
           <li className="micro">microtask / react updated state</li>
           <li className="micro">microtask / react patched DOM</li>
