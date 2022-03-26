@@ -80,7 +80,7 @@ const UseLayoutEffect = () => {
 function App() {
   return (
     <>
-      <h3>Click to compare browser's paint behavior</h3>
+      <h3>Click to compare browser's render behavior</h3>
       <UseEffect />
       <UseLayoutEffect />
 
