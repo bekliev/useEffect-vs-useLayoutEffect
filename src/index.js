@@ -85,8 +85,8 @@ function App() {
       <fieldset>
         <legend>Conclusion</legend>
         <p>
-          In case of logic which triggers reflow (Layout) or repaint (Paint) -
-          use <code>useLayoutEffect</code> instead
+          In case of logic which triggers reflow (Layout+Paint+Composite) or
+          repaint (Paint+Composite) - use <code>useLayoutEffect</code> instead
         </p>
         <img
           src="https://developers.google.com/web/fundamentals/performance/rendering/images/intro/frame-full.jpg"
@@ -100,7 +100,9 @@ function App() {
           <li>
             if your effect changes <code>className</code>
           </li>
-          <li>if you need to update DOM in your effect</li>
+          <li>
+            if you need to update DOM in your effect (which will trigger reflow)
+          </li>
           <li>if you need to smooth your animation</li>
           <li>etc.</li>
         </ul>
