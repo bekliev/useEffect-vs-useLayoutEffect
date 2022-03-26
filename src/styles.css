@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  color: #333;
+  user-select: none;
+}
+
+fieldset {
+  margin-bottom: 1rem;
+}
+
+.bad {
+  font-weight: bold;
+  color: red;
+}
+
+.ok {
+  font-weight: bold;
+  color: green;
+}
