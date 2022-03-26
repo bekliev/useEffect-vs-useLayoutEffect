@@ -7,6 +7,16 @@ fieldset {
   margin-bottom: 1rem;
 }
 
+legend {
+  font-size: 1rem;
+}
+
+code {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .bad {
   font-weight: bold;
   color: red;
