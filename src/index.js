@@ -19,7 +19,7 @@ const UseEffect = () => {
         <code>useEffect</code>
       </legend>
 
-      <p>{state}</p>
+      <p>state: {state}</p>
       <button onClick={() => setState(0)}>update state</button>
 
       <p className="bad">repaint count: 2 (try to notice state flickering)</p>
@@ -55,7 +55,7 @@ const UseLayoutEffect = () => {
         <code>useLayoutEffect</code>
       </legend>
 
-      <p>{state}</p>
+      <p>state: {state}</p>
       <button onClick={() => setState(0)}>update state</button>
 
       <p className="ok">repaint count: 1</p>
