@@ -9,7 +9,7 @@ const UseEffect = () => {
 
   useEffect(() => {
     if (state === 0) {
-      setState(10 + Math.random() * 200);
+      setState(Math.floor(1_000 + Math.random() * 9_999));
     }
   }, [state]);
 
@@ -45,7 +45,7 @@ const UseLayoutEffect = () => {
 
   useLayoutEffect(() => {
     if (state === 0) {
-      setState(10 + Math.random() * 200);
+      setState(Math.floor(1_000 + Math.random() * 9_999));
     }
   }, [state]);
 
